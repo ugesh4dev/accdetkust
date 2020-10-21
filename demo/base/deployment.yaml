@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: details-svc-v1
+ # annotations:
+ #   "sidecar.jaegertracing.io/inject": "true"
+  labels:
+    app: details-svc
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: details-svc
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: details-svc
+        version: v1
+    spec:
+      serviceAccountName: ctibco-details-svc
+      containers:
+      - name: 172.31.28.242:8083/details
+        image: 172.31.28.242:8083/details:2.0.0
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: 500Mi
+            cpu: 500m
+          limits:
+            memory: 900Mi
+            cpu: 1000m
+        ports:
+        - containerPort: 9082
+      imagePullSecrets:
+        - name: regcred
