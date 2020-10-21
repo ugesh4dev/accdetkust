@@ -9,4 +9,4 @@ commonLabels:
 images:
 - name: 172.31.28.242:8083/details
   newName: 172.31.28.242:8083/details
-  newTag: 2.2.2
+  newTag: 2.0.0
