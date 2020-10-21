@@ -4,5 +4,6 @@ resources:
 - deployment.yaml
 - service_account.yaml
 - service.yaml
-commonLabels:
-  env: dev
+images:
+- name: 172.31.28.242:8083/details
+  newTag: 2.0.0
