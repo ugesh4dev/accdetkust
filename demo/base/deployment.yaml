@@ -21,7 +21,18 @@ spec:
     spec:
       serviceAccountName: ctibco-details-svc
       containers:
-      - image: details
+      - env:
+        - name: DETAILS_MY_PORT
+          value: "9082"
+        - name: BW_PROFILE
+          value: "docker"
+        - name: BW_LOGLEVEL
+          value: "ERROR" 
+        - name: BW_JAVA_OPTS
+          value: "-Dbw.engine.opentracing.enable=true" 
+        - name: BW_PROMETHEUS_ENABLE
+          value: "true"
+        image: details
         name: details
         imagePullPolicy: Always
         resources:
@@ -32,6 +43,6 @@ spec:
             memory: 900Mi
             cpu: 1000m
         ports:
-        - containerPort: 9088
+        - containerPort: 9082
       imagePullSecrets:
         - name: regcred
