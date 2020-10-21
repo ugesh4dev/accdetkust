@@ -22,6 +22,7 @@ spec:
       serviceAccountName: ctibco-details-svc
       containers:
       - image: details
+        name: details
         imagePullPolicy: Always
         resources:
           requests:
