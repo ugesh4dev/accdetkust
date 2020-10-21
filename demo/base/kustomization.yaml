@@ -6,4 +6,4 @@ resources:
 - service.yaml
 images:
 - name: 172.31.28.242:8083/details
-  newTag: 2.2.0
+  newTag: 1.0.0
