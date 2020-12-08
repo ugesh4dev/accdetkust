@@ -28,12 +28,8 @@ spec:
           value: "docker"
         - name: BW_LOGLEVEL
           value: "ERROR" 
-        - name: BW_JAVA_OPTS
-          value: "-Dbw.engine.opentracing.enable=true" 
-        - name: BW_PROMETHEUS_ENABLE
-          value: "true"
-        image: details
-        name: details
+        image: offers
+        name: offers
         imagePullPolicy: Always
         resources:
           requests:
