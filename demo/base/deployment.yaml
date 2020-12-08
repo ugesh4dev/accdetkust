@@ -23,7 +23,7 @@ spec:
       containers:
       - env:
         - name: DETAILS_MY_PORT
-          value: "9082"
+          value: "9081"
         - name: BW_PROFILE
           value: "docker"
         - name: BW_LOGLEVEL
@@ -39,6 +39,6 @@ spec:
             memory: 900Mi
             cpu: 1000m
         ports:
-        - containerPort: 9082
+        - containerPort: 9081
       imagePullSecrets:
         - name: regcred
