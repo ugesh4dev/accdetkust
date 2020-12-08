@@ -30,7 +30,7 @@ spec:
           value: "ERROR" 
         image: 13.235.133.12:8083/offers:1.0.0
         name: offers
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         resources:
           requests:
             memory: 500Mi
