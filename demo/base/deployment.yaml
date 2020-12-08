@@ -28,8 +28,8 @@ spec:
           value: "docker"
         - name: BW_LOGLEVEL
           value: "ERROR" 
-        image: 13.235.133.12:8083/offers:1.0.0
-        name: offers
+        image: details
+        name: details
         imagePullPolicy: IfNotPresent
         resources:
           requests:
