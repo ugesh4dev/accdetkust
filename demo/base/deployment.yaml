@@ -8,7 +8,7 @@ metadata:
     app: details-svc
     version: v1
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: details-svc
@@ -39,6 +39,6 @@ spec:
             memory: 900Mi
             cpu: 1000m
         ports:
-        - containerPort: 9081
+        - containerPort: 9082
       imagePullSecrets:
         - name: regcred
