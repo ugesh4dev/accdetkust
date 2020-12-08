@@ -23,7 +23,7 @@ spec:
       containers:
       - env:
         - name: DETAILS_MY_PORT
-          value: "9081"
+          value: "9082"
         - name: BW_PROFILE
           value: "docker"
         - name: BW_LOGLEVEL
