@@ -9,8 +9,8 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 9082
-    targetPort: 9082
+    port: 9081
+    targetPort: 9081
   selector:
     app: details-svc
   type: NodePort
